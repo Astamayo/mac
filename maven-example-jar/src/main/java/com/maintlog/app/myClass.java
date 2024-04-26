@@ -1,4 +1,4 @@
-package com.maintlog.maven.classes;
+package com.maintlog.app;
 
 public class myClass {
 	int c;
