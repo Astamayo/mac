@@ -5,14 +5,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
+import javax.swing.JToolBar;
+import javax.swing.JLabel;
+import javax.swing.JButton;
 
 public class Application {
 
 	private JFrame frame;
-	private JTextField txtPartReplaced;
-	private JTextField txtMiles;
-	private JTextField txtDate;
-	private JTextField txtPartReplaced_1;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
 
 	/**
 	 * Launch the application.
@@ -42,38 +44,44 @@ public class Application {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 504, 300);
+		frame.setBounds(100, 100, 500, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		txtPartReplaced = new JTextField();
-		txtPartReplaced.setText("Part replaced ");
-		txtPartReplaced.setBounds(41, 26, 102, 26);
-		frame.getContentPane().add(txtPartReplaced);
-		txtPartReplaced.setColumns(10);
+		JLabel lblNewLabel = new JLabel("Brand:");
+		lblNewLabel.setBounds(17, 29, 39, 16);
+		frame.getContentPane().add(lblNewLabel);
 		
-		txtMiles = new JTextField();
-		txtMiles.setText("Miles");
-		txtMiles.setColumns(10);
-		txtMiles.setBounds(213, 26, 49, 26);
-		frame.getContentPane().add(txtMiles);
+		textField = new JTextField();
+		textField.setBounds(56, 24, 130, 26);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
 		
-		txtDate = new JTextField();
-		txtDate.setText("Date");
-		txtDate.setColumns(10);
-		txtDate.setBounds(340, 26, 49, 26);
-		frame.getContentPane().add(txtDate);
+		JButton btnSubmit = new JButton("Submit");
+		btnSubmit.setBounds(122, 98, 88, 29);
+		frame.getContentPane().add(btnSubmit);
 		
-		txtPartReplaced_1 = new JTextField();
-		txtPartReplaced_1.setText("part replaced");
-		txtPartReplaced_1.setBounds(24, 64, 130, 26);
-		frame.getContentPane().add(txtPartReplaced_1);
-		txtPartReplaced_1.setColumns(10);
+		JButton btnClear = new JButton("Clear");
+		btnClear.setBounds(311, 98, 88, 29);
+		frame.getContentPane().add(btnClear);
 		
-		JComboBox partsList = new JComboBox();
-		partsList.setBounds(65, 102, 52, 27);
+		JLabel lblNewLabel_1 = new JLabel("Brand:");
+		lblNewLabel_1.setBounds(198, 29, 39, 16);
+		frame.getContentPane().add(lblNewLabel_1);
 		
-		frame.getContentPane().add(partsList);
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(237, 24, 130, 26);
+		frame.getContentPane().add(textField_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("Brand:");
+		lblNewLabel_2.setBounds(379, 29, 39, 16);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(418, 24, 65, 26);
+		frame.getContentPane().add(textField_2);
 		
 	}
 }
